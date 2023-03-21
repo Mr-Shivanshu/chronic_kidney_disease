@@ -9,6 +9,9 @@ try:
 except OSError as e:
     print(f"Error creating directory{logs_path}:{e}")
 LOG_FILE_PATH=os.path.join(logs_path,LOG_FILE_NAME)
+'''
+By default it will take the last file as  the filename
+'''
 logging.basicConfig(level=logging.INFO,filename=LOG_FILE_PATH,filemode='w',format='[%(asctime)s] %(name)s %(levelname)s %(message)s')
 
 
