@@ -1,4 +1,3 @@
 """
-Chronic kideny disease
+Chronic kidney disease
 """
-condscondaconcdacondca caconda 
