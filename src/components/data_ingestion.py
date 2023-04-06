@@ -20,7 +20,7 @@ class DataIngestion:
         logging.info('Data ingestion is initiated')
         try:
             df=pd.read_csv("Notebook\data\csv_result-chronic_kidney_disease_full_updated.csv")
-            logging.info('THe file is being read successfully')
+            logging.info('The file is being read successfully')
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
             logging.info('train test split initiated')
