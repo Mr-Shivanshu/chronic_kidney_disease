@@ -2,6 +2,7 @@ numpy
 pandas 
 -e .
 scikit-learn
+dill
 
 
 
