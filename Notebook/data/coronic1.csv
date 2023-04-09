@@ -1,4 +1,4 @@
-Unnamed: 0,Age,Blood Pressure,Specific Gravity,Albumin,Sugar,Red Blood Cells,Pus Cell,Pus Cell clumps,Bacteria,Blood Glucose Random,Blood Urea,Serum Creatinine,Sodium,Potassium,Hemoglobin,Packed Cell Volume,White Blood Cell Count,Red Blood Cell Count,Hypertension,Diabetes Mellitus,Coronary Artery Disease,Appetite,Pedal Edema,Anemia,Class
+,Age,Blood Pressure,Specific Gravity,Albumin,Sugar,Red Blood Cells,Pus Cell,Pus Cell clumps,Bacteria,Blood Glucose Random,Blood Urea,Serum Creatinine,Sodium,Potassium,Hemoglobin,Packed Cell Volume,White Blood Cell Count,Red Blood Cell Count,Hypertension,Diabetes Mellitus,Coronary Artery Disease,Appetite,Pedal Edema,Anemia,Class
 0,48.0,80.0,1.02,1.0,0.0,Unknown,normal,notpresent,notpresent,121.0,36.0,1.2,,,15.4,44.0,7800.0,5.2,yes,yes,poor,good,no,no,1
 1,7.0,50.0,1.02,4.0,0.0,Unknown,normal,notpresent,notpresent,,18.0,0.8,,,11.3,38.0,6000.0,,no,no,poor,good,no,no,1
 2,62.0,80.0,1.01,2.0,3.0,normal,normal,notpresent,notpresent,423.0,53.0,1.8,,,9.6,31.0,7500.0,,no,yes,poor,poor,no,yes,1
