@@ -81,9 +81,7 @@ class DataTransformation:
             )
             return (
                     train_arr,
-                    test_arr
-                    
-                )
+                    test_arr )
 
                 
         except Exception as e:
