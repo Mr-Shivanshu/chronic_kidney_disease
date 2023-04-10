@@ -30,20 +30,20 @@ class ModelTrainer:
             logging.info("Split array and test array")
             X_train,y_train,X_test,y_test=(train_array[:,:-1],train_array[:,-1],test_array[:,:-1],test_array[:,-1])
 
-            models={'RandomForest':RandomForestClassifier()}
-                    #'Logistic_Regression':LogisticRegression()}
+            models={'Logistic_Regression':LogisticRegression()}
                     #'AdaBoost Regressor':AdaBoostClassifier(),
                     #'svc':SVC(),
                     #'DecisionTreeClassifier':DecisionTreeClassifier(),
                     #'GradientBoosting':GradientBoostingClassifier(),
                     #'XGBClassifier':XGBClassifier(),
                     #'CatBoostClassifier':CatBoostClassifier()
+                    #{#'RandomForest':RandomForestClassifier()}
                
 
             params={
                 
-                'RandomForest' : {'n_estimators': [50, 100, 200],'max_depth': [5, 10, 20],'min_samples_split': [2, 5, 10],'min_samples_leaf': [1, 2, 4],'max_features': ['sqrt', 'log2']}}
-                #'Logistic_Regression' :{'C': [0.001, 0.01, 0.1, 1, 10, 100, 1000],'penalty': ['l1', 'l2']}}
+                #'RandomForest' : {'n_estimators': [50, 100, 200],'max_depth': [5, 10, 20],'min_samples_split': [2, 5, 10],'min_samples_leaf': [1, 2, 4],'max_features': ['sqrt', 'log2']}}
+                'Logistic_Regression' :{'C': [0.001, 0.01, 0.1, 1, 10, 100, 1000],'penalty': ['l1', 'l2']}}
                 #'AdaBoost Regressor': {'n_estimators': [50, 100, 200],'learning_rate': [0.1, 0.5, 1.0],'algorithm': ['SAMME', 'SAMME.R']},
                 #'svc' : {'C': [0.1, 1, 10],'kernel': ['linear', 'poly', 'rbf'],'degree': [2, 3, 4],'gamma': ['scale', 'auto']},
                 #'DecisionTreeClassifier':{'criterion':['gini','entropy',],'max_depth':[2,4,6,8,10], 'min_samples_split': [2, 4, 6, 8, 10],'min_samples_leaf': [1, 2, 3, 4, 5]},
@@ -67,11 +67,14 @@ class ModelTrainer:
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
-            predicted=best_model.predict(X_test)
+            logging.info('i am on k')
+            k=[[45,70,1.02,4,3,1,0,1,1,36,53,1.22,115,2.2,15.4,44,7800,5.2,1,0,0,0,1,1,]]
+            predicted=best_model.predict(k)
 
-            accuracy_score1=accuracy_score(y_test,predicted)
 
-            return accuracy_score1,self.model_trainer_config.trained_model_file_path,best_model_name,best_model,best_model_score
+            #accuracy_score1=accuracy_score(y_test,predicted)
+
+            return predicted,self.model_trainer_config.trained_model_file_path,best_model_name,best_model,best_model_score
         
         except Exception as e:
             logging.info(f"the error is {e}")
